@@ -1,0 +1,121 @@
+C:\Users\gnz5\Downloads\ActflowToolbox\dist\ActflowToolbox-0.2.5.1.tar.gz
+C:\Users\gnz5\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\ActflowToolbox
+---------------------------------------------------------------------------------------
+1) Scaffold directory structure and files
+
+your_package_name-publish/
+	your_package_name/
+		your_package_files
+		__init__.py
+	LICENSE
+	README.md
+	setup.py
+	MANIFEST.in
+---------------------------------------------------------------------------------------
+2) Add other files to your package where your_package_files is
+---------------------------------------------------------------------------------------
+3) Choose a license and put it in the LICENSE file
+
+https://choosealicense.com/
+---------------------------------------------------------------------------------------
+4) Fill in README.md file which uses markdown
+
+https://guides.github.com/features/mastering-markdown/
+---------------------------------------------------------------------------------------
+5) To include all package files, MANIFEST.in should contain
+
+global-include *
+---------------------------------------------------------------------------------------
+6) setup.py should contain
+
+import setuptools
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="your_package_name",
+    version="0.0.1",
+    author="Example Author",
+    author_email="author@example.com",
+    description="A small example package",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/pypa/sampleproject",
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License", # change according to chosen license type
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.6',
+	install_requires=[
+	   'mydependency1',
+	   'mydependency2'
+   ]
+)
+---------------------------------------------------------------------------------------
+7) Make sure pip, setuptools, wheel, twine, and virtualenv are installed and up to date
+
+>>> python -m pip install pip setuptools wheel twine virtualenv --upgrade --no-cache-dir
+---------------------------------------------------------------------------------------
+8) Generate distribution archives (should be inside the "your_package_name" directory)
+
+>>> python setup.py sdist bdist_wheel
+---------------------------------------------------------------------------------------
+9) Make an account on BOTH https://test.pypi.org/ and https://pypi.org/ 
+
+test.pypi.org is to test the package, pypi.org is the actual index
+---------------------------------------------------------------------------------------
+10) Make sure you are in the same directory as setup.py
+---------------------------------------------------------------------------------------
+11) First upload your package to the test index and follow remaining steps.
+    If every looks good, come back to this step and upload to actual index and repeat 
+    The remaining steps.
+
+Upload to test index
+
+>>> python -m twine upload --repository testpypi dist/* 
+
+Upload package to the actual index
+
+>>> python -m twine upload dist/*
+
+**** Note: to install from local source archive file use the following (useful for debugging) ****
+
+>>> python -m pip install full_path/your_source_archive.tar.gz
+---------------------------------------------------------------------------------------
+12) Navigate to right outside the "your_package_name-publish" directory
+---------------------------------------------------------------------------------------
+13) Create a virtual environment to test that everything works
+	
+>>> python -m virtualenv testEnv
+---------------------------------------------------------------------------------------
+14) Activate the virtual environment. The environment is named "testEnv"
+
+>>> .\testEnv\Scripts\activate
+---------------------------------------------------------------------------------------
+15) Install the package
+
+>>> pip install your_package_name
+
+**** Note: to install from TestPyPI use this instead ****
+
+>>> pip install --index-url https://test.pypi.org/simple/ your_package_name
+
+
+**** Note: when installing from TestPyPI, pip will also attempt to install requirements from
+           TestPyPI also. First install all requirements using
+
+	>>> pip install requirement1 requirement2 requirement_n
+
+        Then try to install from TestPyPI again
+---------------------------------------------------------------------------------------
+16) Run python
+
+>>> python
+---------------------------------------------------------------------------------------
+17) Try importing your package and use a function
+
+>>> import your_package_name
+---------------------------------------------------------------------------------------

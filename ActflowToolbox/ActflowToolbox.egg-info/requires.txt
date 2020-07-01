@@ -1,0 +1,11 @@
+numpy
+scipy
+nibabel
+h5py
+matplotlib
+seaborn
+statsmodels
+functions
+zipfile37
+scikit-learn
+wbplot
