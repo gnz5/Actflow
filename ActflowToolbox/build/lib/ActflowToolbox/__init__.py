@@ -18,4 +18,3 @@ from . import tools
 __all__ = []
 __all__.append('actflowcomp')
 __all__.append('connectivity_estimation')
-

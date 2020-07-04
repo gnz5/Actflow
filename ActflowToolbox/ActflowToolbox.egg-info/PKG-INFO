@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: ActflowToolbox
-Version: 0.2.5.1
+Version: 0.2.5.3
 Summary: Tools to quantify the relationship between connectivity     and task activity through network simulations and machine learning prediction.     Helps determine how connections contribute to specific brain functions.
 Home-page: https://github.com/ColeLab/ActflowToolbox
 Author: Cole MW, Ito T, Bassett DS, Schultz DH

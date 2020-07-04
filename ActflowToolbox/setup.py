@@ -1,15 +1,12 @@
 import setuptools
-import requests
-import os
-from setuptools import setup
-from zipfile import ZipFile
+from setuptools import setuptools
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="ActflowToolbox",
-    version="0.2.5.2",
+    version="0.2.5.3",
     author="Cole MW, Ito T, Bassett DS, Schultz DH",
     author_email="michael.cole@rutgers.edu",
     description="Tools to quantify the relationship between connectivity \
@@ -37,6 +34,7 @@ setuptools.setup(
 	   'functions',
        'zipfile37',
        'scikit-learn',
-       'wbplot'
+       'wbplot',
+       'requests'
     ]
 )

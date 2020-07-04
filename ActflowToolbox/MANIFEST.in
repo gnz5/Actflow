@@ -1,2 +1,2 @@
-global-include */matlab_code/* */simulations/* */tools/* */requirements/* */examples/HCP_example.ipynb
+global-include */matlab_code/* */simulations/* */tools/* */requirements/* *.ipynb
 global-exclude */.ipynb_checkpoints/* */__pycache__/*

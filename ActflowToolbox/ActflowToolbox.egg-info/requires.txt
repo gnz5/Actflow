@@ -9,3 +9,4 @@ functions
 zipfile37
 scikit-learn
 wbplot
+requests

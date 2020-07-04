@@ -19,9 +19,11 @@ ActflowToolbox/connectivity_estimation/multregconn.py
 ActflowToolbox/connectivity_estimation/partial_corrconn.py
 ActflowToolbox/connectivity_estimation/pc_multregconn.py
 ActflowToolbox/dependencies/__init__.py
+ActflowToolbox/docs/__init__.py
 ActflowToolbox/examples/HCP_example.ipynb
 ActflowToolbox/examples/__init__.py
 ActflowToolbox/matlab_code/PCmultregressionconnectivity.m
+ActflowToolbox/matlab_code/__init__.py
 ActflowToolbox/matlab_code/actflowmapping.m
 ActflowToolbox/matlab_code/multregressionconnectivity.m
 ActflowToolbox/model_compare/__init__.py
@@ -34,6 +36,7 @@ ActflowToolbox/network_definitions/prep_noncirc.py
 ActflowToolbox/requirements/__init__.py
 ActflowToolbox/requirements/requirements.cfg
 ActflowToolbox/simulations/__init__.py
+ActflowToolbox/tests/test.ipynb
 ActflowToolbox/tools/Q1-Q6_RelatedParcellation210.LR.CorticalAreas_dil_Colors.32k_fs_RL.dlabel.nii
 ActflowToolbox/tools/__init__.py
 ActflowToolbox/tools/addNetColors.py
